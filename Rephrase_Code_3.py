@@ -1,0 +1,22 @@
+# https://personalized-brand.api.rephrase.ai/v2/campaign/nhoFPwJ4enfnby6N0S7nyA0WbFpFK2/export
+
+import requests
+import os
+import sys
+
+bearer_token = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkhNcHdjdFl4YWlRdWg4Y0M0ejN0UCJ9.eyJpc3MiOiJodHRwczovL2F1dGgucmVwaHJhc2UuYWkvIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDcyMTU5MzIzNzQ2MDY2NDgzOTMiLCJhdWQiOlsiaHR0cHM6Ly9kaXkucmVwaHJhc2UuYWkvYXV0aDAiLCJodHRwczovL3JlcGhyYXNlYWktcHJvZC51cy5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNjc5NzYzMzIwLCJleHAiOjE2Nzk4NDk3MjAsImF6cCI6IjNLVTVqdkVxV0pCQ1VLblBYMjZvbmFTUHkzakozMEo0Iiwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSByZWFkOnJlcGhyYXNlLmFpIGFsbDpkaXkgcmVhZDpyZXBocmFzZS5haSJ9.rmk4N8GWDORe4tEbiNKOJ1-6AQ_NvBgRTwMeCOqGU6YdkLjpOchSq_r1Bx_JcXfLvsE9OQWs14miwh67JI5UwL1thTpz4UfUqe21Gfld_sEb3hXq6ntALj0EwqzLcUjvUJSes6hSHx92cgF8hACrmhr9Wc7GEAcGPRdSGW2QZqfTCCpMboeRlg1HkaJPD8THfWxnZEtttxpRjECrF0FgwihKP18ywkZj5BFN7nxzUpgj8n5_KFmiba8Dg29do4kfPFW54ZCCQ2885h_uZOatKazl7YGDX_Fca1jcPXehUanhY9sSTcXfymBLTNG13DiFaLry-bn05QEGZdZmbfZKmQ"
+
+campaign_id = "nhoFPwJ4enfnby6N0S7nyA0WbFpFK2"
+
+url = f"https://personalized-brand.api.rephrase.ai/v2/campaign/{campaign_id}"
+
+headers = {
+    "accept": "application/json",
+    "Authorization": bearer_token
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+#print(response.video)
+
